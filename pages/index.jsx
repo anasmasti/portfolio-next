@@ -1,5 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import {
+  AiOutlineUser,
+  AiOutlineMessage,
+  AiOutlineRead,
+  AiOutlineSolution
+} from 'react-icons/ai'
 
 export default function Home() {
   return (
@@ -13,11 +19,35 @@ export default function Home() {
         <video autoPlay loop muted playsInline className='absolute w-full h-full -z-10 object-cover'>
           <source src="/landing/background/background.webm" type='video/webm' />
         </video>
-      <div className='w-screen h-screen flex justify-center items-center p-5'>
+      <div className='w-screen h-screen flex justify-center items-center p-5 flex-row-reverse'>
         <h1 className='text-white font-bold text-5xl md:text-6xl lg:text-6xl drop-shadow[0_5px_3px_rgba(0.0.0.4)]'>
           Hey <br /> I'm  <a href='#' className='text-purple-200'>Anas Masti</a> <br/> Web developer
-        </h1>
-
+        </h1> 
+        <div className='mr-4'>
+        <ul className='text-gray-300 flex flex-col gap-5 font-semibold'>
+        <li>
+            <a href="">
+            <AiOutlineUser className='text-3xl' />
+            </a>
+          </li>
+          <li>
+            <a href="">
+            <AiOutlineSolution className='text-3xl' />
+            </a>
+          </li>
+          <li>
+            <a href="">
+            <AiOutlineRead className='text-3xl' />
+            </a>
+          </li>
+          <li>
+            <a href="">
+            <AiOutlineMessage className='text-3xl' />
+            </a>
+          </li>
+        </ul>
+        </div>
+       
       </div>
 
     </div>
