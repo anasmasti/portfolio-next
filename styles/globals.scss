@@ -19,3 +19,14 @@ a {
   box-sizing: border-box;
   z-index: 0;
 }
+
+h2::before {
+  content: '';
+  width: 115px;
+  height: 20px;
+  position: absolute;
+  margin-top: 45px;
+  margin-left: -10px;
+  z-index: -1 !important;
+  background-color: #341e9585 !important;
+}

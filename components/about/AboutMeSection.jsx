@@ -54,12 +54,11 @@ export default function AboutMeSection() {
         <MainTitle title="About Me" />
         <div
           ref={refContainer}
-          className={`${aboutStyle.about_us_text} mt-6 lg:w-1/2`}
+          className={`${aboutStyle.about_us_text} mt-12 lg:w-1/2`}
         >
           <AboutParagraph content={paragraphs} progress={progress} />
         </div>
       </div>
-
       <AboutMeLinks />
     </section>
   );
