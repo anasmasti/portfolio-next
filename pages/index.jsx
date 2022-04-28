@@ -6,7 +6,7 @@ import Menu from "../components/Menu/Menu";
 
 export default function Home() {
   return (
-    <div>
+    <main>
       <Head>
         <title>Anas Masti</title>
         <meta
@@ -23,12 +23,7 @@ export default function Home() {
           <Menu />
         </div>
       </div>
-
       <AboutMeSection />
-
-      <div className="p-20">
-        <a href="#" className="p-5 bg-purple-500">See My Skills</a>
-      </div>
-    </div>
+    </main>
   );
 }
