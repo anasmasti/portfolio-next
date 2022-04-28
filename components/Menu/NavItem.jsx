@@ -1,13 +1,9 @@
 import Link from "next/link";
 
-export default function NavItem({ title, icon }) {
+export default function NavItem({ title, icon, goTo }) {
   return (
     <li>
-      <Link
-        href={
-          title == "About" ? `#${title.toLowerCase()}` : title.toLowerCase()
-        }
-      >
+      <Link href={goTo}>
         <a className="relative group">
           {icon}
           <span className="text-[10px]">{title}</span>
