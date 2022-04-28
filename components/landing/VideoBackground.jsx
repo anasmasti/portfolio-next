@@ -7,7 +7,7 @@ export default function VideoBackground() {
       loop
       muted
       playsInline
-      className="absolute w-full h-full -z-10 object-cover"
+      className="absolute w-full h-full z-0 object-cover"
     >
       <source src={backgroundPath} type="video/webm" />
     </video>
