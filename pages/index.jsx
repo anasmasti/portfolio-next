@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
 
       <VideoBackground />
-      <div className="w-screen h-screen flex justify-center items-center p-5 flex-col z-10">
+      <div className="h-screen flex justify-center items-center p-5 flex-col z-10">
         <LandingTitle />
         <div className="mt-4">
           <Menu />

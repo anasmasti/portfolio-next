@@ -50,7 +50,7 @@ export default function AboutMeSection() {
 
   return (
     <section id="about">
-      <div className="bg-black text-white p-24 mt-10 flex justify-center items-center flex-col">
+      <div className="bg-black text-white p-10 lg:p-24 mt-10 md:flex md:justify-center md:items-center md:flex-col lg:flex lg:justify-center lg:items-center lg:flex-col">
         <MainTitle title="About Me" />
         <div
           ref={refContainer}
