@@ -7,18 +7,20 @@ export default function AboutMeLinks() {
       id: 1,
       icon: <AiOutlineSolution className="text-2xl" />,
       title: "See My Skils",
+      goTo: 'skills'
     },
     {
-      id: 1,
+      id: 2,
       icon: <AiOutlineMessage className="text-2xl" />,
       title: "Contact Me",
+      goTo: 'contact'
     },
   ];
-  
+
   return (
-    <div className="p-24 flex justify-center gap-3">
+    <div className="mt-40 p-24 flex justify-center gap-3">
       {links.map((link) => (
-        <MainButton key={link.id} title={link.title} icon={link.icon} />
+        <MainButton key={link.id} title={link.title} icon={link.icon} goTo={link.goTo} />
       ))}
     </div>
   );

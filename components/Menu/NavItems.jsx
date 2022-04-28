@@ -14,17 +14,17 @@ export default function NavItems() {
       title: "About",
     },
     {
-      id: 1,
+      id: 2,
       icon: <AiOutlineSolution className="text-3xl" />,
       title: "Skills",
     },
     {
-      id: 1,
+      id: 3,
       icon: <AiOutlineRead className="text-3xl" />,
       title: "Projects",
     },
     {
-      id: 1,
+      id: 4,
       icon: <AiOutlineMessage className="text-3xl" />,
       title: "Contact",
     },

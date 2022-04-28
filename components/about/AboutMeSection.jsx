@@ -49,12 +49,12 @@ export default function AboutMeSection() {
   }, [handelScroll]);
 
   return (
-    <section id="About">
-      <div className="bg-black text-white p-24 mt-10">
-      <MainTitle title='About Me' />
+    <section id="about">
+      <div className="bg-black text-white p-24 mt-10 flex justify-center items-center flex-col">
+        <MainTitle title="About Me" />
         <div
           ref={refContainer}
-          className={`${aboutStyle.about_us_text} mt-6 lg:w-2/4`}
+          className={`${aboutStyle.about_us_text} mt-6 lg:w-1/2`}
         >
           <AboutParagraph content={paragraphs} progress={progress} />
         </div>
