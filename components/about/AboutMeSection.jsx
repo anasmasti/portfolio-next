@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import AboutParagraph from "./AboutParagraph";
 import aboutStyle from "../../styles/about.module.scss";
 import AboutMeLinks from "./AboutMeLinks";
+import MainTitle from "../shared/MainTitle";
 
 export default function AboutMeSection() {
   const [scrollY, setScrollY] = useState(0);
@@ -50,7 +51,7 @@ export default function AboutMeSection() {
   return (
     <section id="About">
       <div className="bg-black text-white p-24 mt-10">
-        <h2 className="text-5xl md:text-6xl lg:text-6xl font-bold">About Me</h2>
+      <MainTitle title='About Me' />
         <div
           ref={refContainer}
           className={`${aboutStyle.about_us_text} mt-6 lg:w-2/4`}
