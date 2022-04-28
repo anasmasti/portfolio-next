@@ -3,8 +3,8 @@ export default function Copyright() {
   let currentYear = today.getFullYear();
 
   return (
-    <p className="text-gray-600 flex justify-center p-5">
-      Copyright {currentYear} &copy;
-    </p>
+    <section className="flex justify-center p-5">
+      <p className="text-gray-600">Copyright {currentYear} &copy;</p>
+    </section>
   );
 }
