@@ -1,5 +1,7 @@
+import SkillsSection from "../../components/skills/SkillsSection";
+
 export default function Skills() {
   return (
-    <div className="text-white">Skills</div>
+    <SkillsSection />
   )
 }
