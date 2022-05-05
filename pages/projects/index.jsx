@@ -1,5 +1,5 @@
+import ProjectsSection from "../../components/projects/ProjectsSection";
+
 export default function Projects() {
-  return (
-    <div className="text-white" >Projects</div>
-  )
+  return <ProjectsSection />;
 }
