@@ -1,0 +1,13 @@
+.main_card_background {
+    background-size: cover;
+    background-position: center;
+    border-radius: 24px;
+    bottom: 0;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center;
+    transition: filter 200ms linear, transform 200ms linear;
+  }

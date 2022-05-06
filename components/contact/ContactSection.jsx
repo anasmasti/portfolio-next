@@ -1,5 +1,4 @@
 import PagesLayout from "../layouts/PagesLayout";
-import GoHomeButton from "../shared/GoHomeButton";
 import MainTitle from "../shared/MainTitle";
 import ContactForm from "./ContactForm";
 import ContactLinks from "./ContactLinks";
