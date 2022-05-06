@@ -1,7 +1,5 @@
-import contactStyle from "../../styles/Contact.module.scss";
 export default function ContactLinks() {
   let message = "Hi Anas I saw your portfolio, i want to tell you that ";
-  let whatsappbackgroundPath = "/images/contact/whatsapp.webp";
 
   let links = [
     {
