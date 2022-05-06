@@ -12,7 +12,9 @@ export default function ContactSection() {
           <MainTitle title="Contact" />
         </div>
         <ContactLinks />
-        <ContactForm />
+        <div className="w-full lg:w-1/2">
+          <ContactForm />
+        </div>
       </div>
     </PagesLayout>
   );
