@@ -3,6 +3,7 @@ import AboutParagraph from "./AboutParagraph";
 import aboutStyle from "../../styles/about.module.scss";
 import AboutMeLinks from "./AboutMeLinks";
 import MainTitle from "../shared/MainTitle";
+import SocialMedia from "../shared/SocialMedia";
 
 export default function AboutMeSection() {
   const [scrollY, setScrollY] = useState(0);
@@ -51,7 +52,10 @@ export default function AboutMeSection() {
   return (
     <section id="about">
       <div className="bg-black text-white p-10 lg:p-24 mt-10 md:flex md:justify-center md:items-center md:flex-col lg:flex lg:justify-center lg:items-center lg:flex-col">
-        <MainTitle title="About Me" />
+        <div className="flex flex-col lg:w-1/2 md:w-full">
+          <MainTitle title="About Me" />
+          <SocialMedia />
+        </div>
         <div
           ref={refContainer}
           className={`${aboutStyle.about_us_text} mt-12 lg:w-1/2`}
