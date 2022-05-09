@@ -29,13 +29,13 @@ export default function ContactLinks() {
   ];
 
   return (
-    <div className="flex justify-between gap-3 mt-10">
+    <div className="w-full lg:w-1/2 md:w-full flex justify-between gap-3 mt-10">
       {links.map((link) => (
         <a
           key={link.id}
           href={link.url}
           target="_blank"
-          className={`p-3 bg-cover bg-no-repeat bg-center ${link.bg_img} rounded-xl`}
+          className={`p-3 bg-cover bg-no-repeat bg-center ${link.bg_img} rounded-xl font-bold text-white`}
         >
           {link.title}
         </a>
