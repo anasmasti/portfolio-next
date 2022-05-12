@@ -35,7 +35,7 @@ export default function ContactLinks() {
           key={link.id}
           href={link.url}
           target="_blank"
-          className={`p-3 bg-cover bg-no-repeat bg-center ${link.bg_img} rounded-xl font-bold text-white`}
+          className={`p-3 md:p-6 lg:p-6 bg-cover bg-no-repeat bg-center ${link.bg_img} rounded-xl font-bold text-white  transition-all  duration-300 hover:pt-2 md:hover:pt-5 lg:hover:pt-5`}
         >
           {link.title}
         </a>

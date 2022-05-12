@@ -7,7 +7,7 @@ export default function ProjectsItems() {
       id: 1,
       title: "My Old Portfolio",
       link: "https://mysys-app.netlify.app/",
-      tech: "Angular / NodeJS: ExpressJS.",
+      tech: "Angular - NodeJS: ExpressJS.",
     },
     {
       id: 11,
@@ -61,7 +61,7 @@ export default function ProjectsItems() {
       id: 9,
       title: "Hijaby",
       link: "https://play.google.com/store/apps/details?id=com.masti.hijaby&hl=fr&gl=US",
-      tech: "Flutter / NodeJs: ExpressJS.",
+      tech: "Flutter - NodeJs: ExpressJS.",
     },
   ];
 
