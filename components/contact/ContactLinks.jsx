@@ -29,7 +29,7 @@ export default function ContactLinks() {
   ];
 
   return (
-    <div className="w-full lg:w-1/2 md:w-full flex justify-between gap-3 mt-10">
+    <div className="w-full lg:w-1/2 md:w-full flex justify-between gap-3 mt-10 break-words">
       {links.map((link) => (
         <a
           key={link.id}
