@@ -15,7 +15,7 @@ export default function ProjectsItems() {
       title: "M&C",
       link: "https://mccoton.com/",
       tech: "Prestashop.",
-      bg: "bg-old",
+      bg: "bg-mc",
     },
     {
       id: 2,
