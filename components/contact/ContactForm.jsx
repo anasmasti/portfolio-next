@@ -18,6 +18,8 @@ export default function ContactForm() {
     setFormData(data);
   }
 
+ 
+
   return (
     <div className="p-10 bg-[#341e95c5] rounded-2xl mt-10 flex">
       <form className="flex flex-col gap-4 w-full">
