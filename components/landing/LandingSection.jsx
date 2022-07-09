@@ -27,10 +27,11 @@ export default function LandingSection() {
       if (vantaEffect) vantaEffect.destroy();
     };
   }, [vantaEffect]);
+  
   return (
     <>
-      <div ref={landingRef} className="h-screen z-0 absolute"></div>
-      <div className="h-screen bg-transparent flex justify-center items-center p-5 flex-col z-10 relative">
+      <div ref={landingRef} className="absolute z-0 w-full h-full"></div>
+      <div className="h-screen bg-transparent flex justify-center items-center p-5 flex-col  relative">
         <LandingTitle />
         <div className="mt-4">
           <Menu />
