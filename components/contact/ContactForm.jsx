@@ -18,11 +18,8 @@ export default function ContactForm() {
     setFormData(data);
   }
 
- 
-
   return (
-
-    <div className="p-10 bg-gray-900 rounded-2xl mt-10 flex">
+    <div className="p-10 bg-black z-10 relative rounded-2xl mt-10 flex">
       <form className="flex flex-col gap-4 w-full">
         <contactFormContext.Provider value={{ formData, fillFormData }}>
           <ContactFormInputsSection />

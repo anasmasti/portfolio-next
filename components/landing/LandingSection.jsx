@@ -18,7 +18,8 @@ export default function LandingSection() {
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0x8e76ff,
+          size: 1.4,
+          color: 0x603cfd,
           backgroundColor: 0x0,
         })
       );
@@ -27,7 +28,7 @@ export default function LandingSection() {
       if (vantaEffect) vantaEffect.destroy();
     };
   }, [vantaEffect]);
-  
+
   return (
     <>
       <div ref={landingRef} className="absolute z-0 w-full h-full"></div>
