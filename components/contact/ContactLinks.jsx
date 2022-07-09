@@ -29,13 +29,13 @@ export default function ContactLinks() {
   ];
 
   return (
-    <div className="w-full lg:w-1/2 md:w-full flex justify-between gap-3 mt-10 break-words">
+    <div className="w-full lg:w-1/3 md:w-full flex justify-between gap-3 mt-10 break-words">
       {links.map((link) => (
         <a
           key={link.id}
           href={link.url}
           target="_blank"
-          className={`p-3 md:p-6 lg:p-6 bg-cover bg-no-repeat bg-center ${link.bg_img} rounded-xl font-bold text-white  transition-all  duration-300 hover:pt-2 md:hover:pt-5 lg:hover:pt-5`}
+          className={`p-3 bg-cover bg-no-repeat bg-center ${link.bg_img} rounded-xl font-bold text-white  transition-all  duration-300 hover:-translate-y-1 `}
         >
           {link.title}
         </a>
