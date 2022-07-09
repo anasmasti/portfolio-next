@@ -1,5 +1,5 @@
 export default function VideoBackground() {
-  let backgroundPath = "/videos/hand.mp4";
+  let backgroundPath = "/videos/hand.webm";
 
   return (
     <video
@@ -9,8 +9,7 @@ export default function VideoBackground() {
       playsInline
       className="absolute w-full h-full z-0 object-cover"
     >
-      {/* <source src={backgroundPath} type="video/webm" /> */}
-      <source src={backgroundPath} type="video/mp4" />
+      <source src={backgroundPath} type="video/webm" />
     </video>
   );
 }
