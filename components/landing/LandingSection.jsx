@@ -18,7 +18,7 @@ export default function LandingSection() {
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0x823fff,
+          color: 0x8e76ff,
           backgroundColor: 0x0,
         })
       );
