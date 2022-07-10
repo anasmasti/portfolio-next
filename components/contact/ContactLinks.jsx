@@ -3,7 +3,7 @@ import { RiMessengerLine, RiTelegramLine, RiWhatsappLine, RiMailSendLine } from 
 
 
 export default function ContactLinks() {
-  let message = "Hi Anas I saw your portfolio, i want to tell you that ";
+  let message = "Hi Anas I saw your portfolio, I want to tell you that ";
 
   let links = [
     {
@@ -40,7 +40,7 @@ export default function ContactLinks() {
   ];
 
   return (
-    <div className="w-full lg:w-1/2 md:w-full flex justify-between gap-3 mt-10 break-words">
+    <div className="w-full lg:w-1/2 md:w-full flex flex-col lg:flex-row md:flex-row justify-between gap-3 mt-10 break-words">
       {links.map((link) => (
         <a
           key={link.id}
