@@ -1,25 +1,82 @@
-import { useContext } from "react";
-import { contactFormContext } from "./ContactFormContext";
+import { useContext, useState } from "react";
+import {
+  contactFormContext,
+  contactFormGlobalContext,
+} from "./ContactFormContext";
 import sendMessage from "../../services/contact/sendMeddase";
 
 export default function SubmitButton() {
-  const { formData } = useContext(contactFormContext);
+  const { formData, fillFormData } = useContext(contactFormContext);
+  const { formGlobalData, fillFormGlobalData } = useContext(
+    contactFormGlobalContext
+  );
+  const [isDone, setIsDone] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   let handleSubmit = () => {
-    event.preventDefault();
     // convert data to json for submit it
     let dataToJson = JSON.stringify(formData);
-    // Send message to database
-    sendMessage(dataToJson);
+
+    if (
+      formData.first_name == "" ||
+      formData.last_name == "" ||
+      formData.phone == "" ||
+      formData.email == "" ||
+      formData.message == ""
+    ) {
+      setHasError(true);
+      setErrorMessage("You Must Complete All Fields ⛔️");
+      setTimeout(() => {
+        setHasError(false);
+        setErrorMessage("");
+      }, 2000);
+    } else {
+      // Send message to database
+      sendMessage(dataToJson)
+        .then(() => {
+          setIsDone(true);
+          fillFormGlobalData({
+            sent: true,
+          });
+          fillFormData({
+            first_name: "",
+            last_name: "",
+            phone: "",
+            email: "",
+            message: "",
+          });
+          setTimeout(() => {
+            setIsDone(false);
+            fillFormGlobalData({
+              sent: false,
+            });
+          }, 3000);
+        })
+        .catch((error) => {
+          setHasError(true);
+          setErrorMessage(error);
+          // Empty the fields
+          setTimeout(() => {
+            setHasError(false);
+            setErrorMessage("");
+          }, 2000);
+        });
+    }
   };
 
   return (
     <button
-      type="submit"
-      className="p-3 bg-[#603cfe] rounded-xl text-white font-bold flex justify-center gap-1 transition-all duration-300 delay-75 hover:bg-black"
-      onClick={() => handleSubmit()}
+      type="button"
+      className={`p-3 ${isDone && "bg-green-500"} ${hasError && "bg-red-500"} ${
+        !isDone && !hasError && "bg-[#603cfe]"
+      } rounded-xl text-white font-bold flex justify-center gap-1 transition-all duration-300 delay-75 hover:bg-black`}
+      onClick={(e) => handleSubmit(e)}
+      disabled={isDone || hasError}
     >
-      Send
+      {!isDone && !hasError && "Send Message"}
+      {isDone && "Message Sent Successfully ✅"}
+      {hasError && (errorMessage ? errorMessage : "There's An Error 📛")}
     </button>
   );
 }

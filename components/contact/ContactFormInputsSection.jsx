@@ -8,13 +8,13 @@ export default function ContactFormInputsSection() {
       inputs: [
         {
           id: 1,
-          name: "first-name",
+          name: "first_name",
           type: "text",
           placeholder: "First name",
         },
         {
           id: 2,
-          name: "last-name",
+          name: "last_name",
           type: "text",
           placeholder: "Last name",
         },
