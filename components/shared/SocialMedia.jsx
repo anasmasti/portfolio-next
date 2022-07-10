@@ -5,22 +5,26 @@ export default function SocialMedia() {
     {
       id: 1,
       icon: <ImGithub />,
-      url: "facebook.com",
+      url: "https://github.com/anasmasti",
+      label: "GitHub",
     },
     {
       id: 2,
       icon: <ImLinkedin2 />,
-      url: "facebook.com",
+      url: "https://www.linkedin.com/in/anas-masti-616040189",
+      label: "LinkedIn",
     },
     {
       id: 3,
       icon: <ImTwitter />,
-      url: "facebook.com",
+      url: "https://twitter.com/AnasMasti",
+      label: "Twitter",
     },
     {
       id: 4,
       icon: <ImFacebook />,
-      url: "facebook.com",
+      url: "https://www.facebook.com/anas.masti.96",
+      label: "Facebook",
     },
   ];
 
@@ -29,7 +33,10 @@ export default function SocialMedia() {
       {socialMedia.map((social) => (
         <a
           key={social.id}
+          aria-label={social.label}
           href={social.url}
+          rel="noopener"
+          target="_blank"
           className="hover:text-white transition-all duration-150"
         >
           {social.icon}

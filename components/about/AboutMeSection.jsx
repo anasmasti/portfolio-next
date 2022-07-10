@@ -14,7 +14,7 @@ export default function AboutMeSection() {
   let paragraphs = [
     {
       id: 1,
-      body: "My name is Anas MASTI, i'm a Full-Stack Web Developer and Designer, passionate about creating websites with ergonomic and responsive qualities that can be adapted to any device.",
+      body: "I'm a Full-Stack Web Developer based in Morocco, passionate about creating responsive websites with ergonomic qualities that can be adapted to any device.",
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ export default function AboutMeSection() {
     },
     {
       id: 3,
-      body: "I'm so interested in the IT development sector, and very attracted to new technology.",
+      body: "I'm so interested in the IT development sector, and very attracted to new technologies.",
     },
   ];
   let numberOfPages = 3;

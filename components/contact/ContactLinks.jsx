@@ -1,3 +1,7 @@
+import { AiOutlineWhatsApp } from "react-icons/ai";
+import { RiMessengerLine, RiTelegramLine, RiWhatsappLine, RiMailSendLine } from "react-icons/ri";
+
+
 export default function ContactLinks() {
   let message = "Hi Anas I saw your portfolio, i want to tell you that ";
 
@@ -7,24 +11,31 @@ export default function ContactLinks() {
       title: "WhatsApp",
       url: `https://wa.me/212660548100?text=${message}`,
       bg_img: "bg-whatsapp",
+      icon: <RiWhatsappLine />
     },
     {
       id: 2,
       title: "Messenger",
       url: "https://m.me/anas.masti.96",
       bg_img: "bg-messenger",
+      icon: <RiMessengerLine />
+
     },
     {
       id: 3,
       title: "Telegram",
       url: "https://t.me/anasmasti",
       bg_img: "bg-telegram",
+      icon: <RiTelegramLine />
+
     },
     {
       id: 4,
       title: "E-mail",
       url: `mailto:anasmasti@hotmail.com?subject='Anas Masti Portfolio' Contact&body=${message}`,
       bg_img: "bg-mail",
+      icon: <RiMailSendLine />
+
     },
   ];
 
@@ -35,9 +46,9 @@ export default function ContactLinks() {
           key={link.id}
           href={link.url}
           target="_blank"
-          className={`p-1 text-sm bg-cover md:p-3 md:text-md lg:p-3 lg:text-md bg-no-repeat bg-center ${link.bg_img} rounded-xl font-bold text-white  transition-all  duration-300 hover:-translate-y-1 `}
+          className={`p-1 flex justify-center items-center gap-1 text-sm bg-cover md:p-2 md:text-md lg:p-2 lg:text-md bg-no-repeat bg-center bg-[#1e1e1e90] rounded-xl font-bold text-white  transition-all  duration-300 hover:-translate-y-1 `}
         >
-          {link.title}
+         {link.icon} {link.title}
         </a>
       ))}
     </div>
