@@ -10,7 +10,7 @@ export default function Contact() {
           name="description"
           content="Hey, I'm Anas Masti, I'm a Web developer"
         />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" defer></script>
       </Head>
       <ContactSection />
     </section>

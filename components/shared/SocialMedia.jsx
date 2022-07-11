@@ -35,8 +35,8 @@ export default function SocialMedia() {
           key={social.id}
           aria-label={social.label}
           href={social.url}
-          rel="noopener"
           target="_blank"
+          rel="noreferrer"
           className="hover:text-white transition-all duration-150"
         >
           {social.icon}

@@ -46,6 +46,7 @@ export default function ContactLinks() {
           key={link.id}
           href={link.url}
           target="_blank"
+          rel="noreferrer"
           className={`p-1 flex justify-center items-center gap-1 text-sm bg-cover md:p-2 md:text-md lg:p-2 lg:text-md bg-no-repeat bg-center bg-[#1e1e1e90] rounded-xl font-bold text-white  transition-all  duration-300 hover:-translate-y-1 `}
         >
          {link.icon} {link.title}

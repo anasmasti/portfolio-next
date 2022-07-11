@@ -12,6 +12,7 @@ export default function ProjectItem({ title, link, tech, bg }) {
       <a
         href={link}
         target="_blank"
+        rel="noreferrer"
       >
         <h3 className="text-3xl font-bold">{title}</h3>
         <pre className="mt-5">{tech}</pre>
