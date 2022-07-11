@@ -19,11 +19,6 @@ export default function Contact() {
           name="google-site-verification"
           content="e7uObb_R2u4MF6JYc14AYBpZSN8ArazQ_YD0iNnm_UY"
         />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta
-          http-equiv="Content-Type"
-          content="text/html; charset=ISO-8859-1"
-        />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" defer></script>
       </Head>
       <ContactSection />
