@@ -13,7 +13,7 @@ export default function Contact() {
         <meta
           name="keywords"
           content="Anas, Masti, Anas Masti, anasmasti,Développeur web, Développeur Angular, Développeur VueJs, Angular, React, NextJs, VueJs, Javascript, Java, Php, Laravel, Maroc, Maroc, Morocco, Développeur, Developer Web Full-Stack"
-        ></meta>
+        />
         <meta name="author" content="Anas Masti" />
         <meta
           name="google-site-verification"
@@ -24,10 +24,7 @@ export default function Contact() {
           http-equiv="Content-Type"
           content="text/html; charset=ISO-8859-1"
         />
-        <script
-          src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
-          defer
-        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" defer></script>
       </Head>
       <ContactSection />
     </section>

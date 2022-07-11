@@ -13,7 +13,7 @@ export default function Projects() {
         <meta
           name="keywords"
           content="Anas, Masti, Anas Masti, anasmasti,Développeur web, Développeur Angular, Développeur VueJs, Angular, React, NextJs, VueJs, Javascript, Java, Php, Laravel, Maroc, Maroc, Morocco, Développeur, Developer Web Full-Stack"
-        ></meta>
+        />
         <meta name="author" content="Anas Masti" />
         <meta
           name="google-site-verification"
