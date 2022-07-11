@@ -8,9 +8,9 @@ export default function SkillsItems() {
       technologies: [
         { id: 1, technology: "JavaScript" },
         { id: 2, technology: "Angular, NgRx" },
-        { id: 3, technology: "Vue JS, Vuex" },
-        { id: 4, technology: "Nuxt JS" },
+        { id: 2, technology: "React Js, NextJs" },
         { id: 5, technology: "Css 3, Sass" },
+        { id: 5, technology: "Bootstrap Tailwind css" },
         { id: 6, technology: "Html 5" },
       ],
     },
@@ -19,8 +19,8 @@ export default function SkillsItems() {
       title: "Back-end",
       technologies: [
         { id: 1, technology: "Node JS, Express JS" },
+        { id: 3, technology: "Java, Spring Boot" },
         { id: 2, technology: "Php, Laravel MVC" },
-        { id: 3, technology: "C#, Asp.Net Core" },
       ],
     },
     {
@@ -42,7 +42,7 @@ export default function SkillsItems() {
     {
       id: 5,
       title: "Mobile Development",
-      technologies: [{ id: 1, technology: "Dark, Flutter" }],
+      technologies: [{ id: 1, technology: "Dart, Flutter" }],
     },
     {
       id: 6,
