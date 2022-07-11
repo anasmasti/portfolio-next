@@ -1,4 +1,4 @@
-import aboutStyle from "../../styles/about.module.scss";
+import aboutStyle from "../../styles/About.module.scss";
 
 const blockOpacity = (sectionProgress, blockNo) => {
   let progress = sectionProgress - blockNo;
