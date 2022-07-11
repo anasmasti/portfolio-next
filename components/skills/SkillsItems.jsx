@@ -10,7 +10,7 @@ export default function SkillsItems() {
         { id: 2, technology: "Angular, NgRx" },
         { id: 2, technology: "React Js, NextJs" },
         { id: 5, technology: "Css 3, Sass" },
-        { id: 5, technology: "Bootstrap Tailwind css" },
+        { id: 5, technology: "Bootstrap, Tailwind css" },
         { id: 6, technology: "Html 5" },
       ],
     },
