@@ -1,5 +1,5 @@
 export default function VideoBackground() {
-  let backgroundPath = "/videos/hand.webm";
+  let backgroundPath = "/static/videos/hand.webm";
 
   return (
     <video

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import AboutMeSection from "../components/about/AboutMeSection";
 import LandingSection from "../components/landing/LandingSection";
 
@@ -6,25 +7,7 @@ export default function Home() {
   return (
     <main>
       <Head>
-        <title>Anas Masti</title>
-        <meta
-          name="description"
-          content="Hey, I'm Anas Masti, I'm a Web developer based in Morocco"
-        />
-        <meta
-          name="keywords"
-          content="Anas, Masti, Anas Masti, anasmasti,Développeur web, Développeur Angular, Développeur VueJs, Angular, React, NextJs, VueJs, Javascript, Java, Php, Laravel, Maroc, Maroc, Morocco, Développeur, Developer Web Full-Stack"
-        />
-        <meta name="author" content="Anas Masti" />
-        <meta
-          name="google-site-verification"
-          content="e7uObb_R2u4MF6JYc14AYBpZSN8ArazQ_YD0iNnm_UY"
-        />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <script
-          src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
-          defer
-        ></script>
+      <title>Anas Masti</title>
       </Head>
       <LandingSection />
       <AboutMeSection />
