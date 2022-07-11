@@ -1,6 +1,6 @@
 import { Html, NextScript, Main, Head } from "next/document";
 
-function MyDocument() {
+export default function MyDocument() {
   return (
     <Html lang="en">
       <Head>
@@ -27,5 +27,3 @@ function MyDocument() {
     </Html>
   );
 }
-
-export default MyDocument;

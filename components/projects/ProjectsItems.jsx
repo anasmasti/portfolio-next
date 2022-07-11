@@ -6,7 +6,7 @@ export default function ProjectsItems() {
     {
       id: 1,
       title: "My Old Portfolio",
-      link: "https://my-old-portfolio.vercel.app/",
+      link: "https://my-old-portfolio-website.netlify.app/",
       tech: "Angular - NodeJS: ExpressJS.",
       bg: "bg-old",
     },
