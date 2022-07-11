@@ -10,7 +10,7 @@ export default function LandingTitle() {
       >
         Anas Masti
       </a>{" "}
-      <br /> Web developer
+      <br /> Web Developer
     </h1>
   );
 }
