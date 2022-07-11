@@ -1,11 +1,9 @@
 import { Html, NextScript, Main, Head } from "next/document";
-import Script from "next/script";
 
 function MyDocument() {
   return (
     <Html lang="en">
       <Head>
-        <title>Anas Masti</title>
         <meta
           name="description"
           content="Hey, I'm Anas Masti, I'm a Web developer based in Morocco"
