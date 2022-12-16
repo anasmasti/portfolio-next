@@ -7,9 +7,7 @@ import sendMessage from "../../services/contact/sendMeddase";
 
 export default function SubmitButton() {
   const { formData, fillFormData } = useContext(contactFormContext);
-  const { formGlobalData, fillFormGlobalData } = useContext(
-    contactFormGlobalContext
-  );
+  const { fillFormGlobalData } = useContext(contactFormGlobalContext);
   const [isDone, setIsDone] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -32,36 +30,37 @@ export default function SubmitButton() {
         setErrorMessage("");
       }, 2000);
     } else {
+      console.log(dataToJson);
       // Send message to database
-      sendMessage(dataToJson)
-        .then(() => {
-          setIsDone(true);
-          fillFormGlobalData({
-            sent: true,
-          });
-          fillFormData({
-            first_name: "",
-            last_name: "",
-            phone: "",
-            email: "",
-            message: "",
-          });
-          setTimeout(() => {
-            setIsDone(false);
-            fillFormGlobalData({
-              sent: false,
-            });
-          }, 3000);
-        })
-        .catch((error) => {
-          setHasError(true);
-          setErrorMessage(error);
-          // Empty the fields
-          setTimeout(() => {
-            setHasError(false);
-            setErrorMessage("");
-          }, 2000);
-        });
+      // sendMessage(dataToJson)
+      //   .then(() => {
+      //     setIsDone(true);
+      //     fillFormGlobalData({
+      //       sent: true,
+      //     });
+      //     fillFormData({
+      //       first_name: "",
+      //       last_name: "",
+      //       phone: "",
+      //       email: "",
+      //       message: "",
+      //     });
+      //     setTimeout(() => {
+      //       setIsDone(false);
+      //       fillFormGlobalData({
+      //         sent: false,
+      //       });
+      //     }, 3000);
+      //   })
+      //   .catch((error) => {
+      //     setHasError(true);
+      //     setErrorMessage(error);
+      //     // Empty the fields
+      //     setTimeout(() => {
+      //       setHasError(false);
+      //       setErrorMessage("");
+      //     }, 2000);
+      //   });
     }
   };
 
@@ -71,7 +70,7 @@ export default function SubmitButton() {
       className={`p-3 ${isDone && "bg-green-500"} ${hasError && "bg-red-500"} ${
         !isDone && !hasError && "bg-[#603cfe]"
       } rounded-xl text-white font-bold flex justify-center gap-1 transition-all duration-300 delay-75 hover:bg-black`}
-      onClick={(e) => handleSubmit(e)}
+      onClick={() => handleSubmit()}
       disabled={isDone || hasError}
     >
       {!isDone && !hasError && "Send Message"}

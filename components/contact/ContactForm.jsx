@@ -1,6 +1,8 @@
 import ContactFormInputsSection from "./ContactFormInputsSection";
-import { contactFormContext } from "./ContactFormContext";
-import { contactFormGlobalContext } from "./ContactFormContext";
+import {
+  contactFormContext,
+  contactFormGlobalContext,
+} from "./ContactFormContext";
 import SubmitButton from "./SubmitButton";
 import { useState, useRef } from "react";
 
@@ -29,7 +31,7 @@ export default function ContactForm() {
     setFormGlobalData(data);
   }
 
-  if (formGlobalData.sent == true) {
+  if (formGlobalData.sent) {
     formRef.current.reset();
   }
 
