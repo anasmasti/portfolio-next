@@ -3,7 +3,7 @@ import {
   contactFormContext,
   contactFormGlobalContext,
 } from "./ContactFormContext";
-import sendMessage from "../../services/contact/sendMeddase";
+import sendMessage from "../../services/contact/sendMessage";
 
 export default function SubmitButton() {
   const { formData, fillFormData } = useContext(contactFormContext);
@@ -13,9 +13,6 @@ export default function SubmitButton() {
   const [errorMessage, setErrorMessage] = useState("");
 
   let handleSubmit = () => {
-    // convert data to json for submit it
-    let dataToJson = JSON.stringify(formData);
-
     if (
       formData.first_name == "" ||
       formData.last_name == "" ||
@@ -30,37 +27,37 @@ export default function SubmitButton() {
         setErrorMessage("");
       }, 2000);
     } else {
-      console.log(dataToJson);
-      // Send message to database
-      // sendMessage(dataToJson)
-      //   .then(() => {
-      //     setIsDone(true);
-      //     fillFormGlobalData({
-      //       sent: true,
-      //     });
-      //     fillFormData({
-      //       first_name: "",
-      //       last_name: "",
-      //       phone: "",
-      //       email: "",
-      //       message: "",
-      //     });
-      //     setTimeout(() => {
-      //       setIsDone(false);
-      //       fillFormGlobalData({
-      //         sent: false,
-      //       });
-      //     }, 3000);
-      //   })
-      //   .catch((error) => {
-      //     setHasError(true);
-      //     setErrorMessage(error);
-      //     // Empty the fields
-      //     setTimeout(() => {
-      //       setHasError(false);
-      //       setErrorMessage("");
-      //     }, 2000);
-      //   });
+      sendMessage(formData)
+        .then(() => {
+          setIsDone(true);
+          fillFormGlobalData({
+            sent: true,
+          });
+          fillFormData({
+            first_name: "",
+            last_name: "",
+            phone: "",
+            email: "",
+            message: "",
+          });
+          setTimeout(() => {
+            setIsDone(false);
+            fillFormGlobalData({
+              sent: false,
+            });
+          }, 3000);
+        })
+        .catch((error) => {
+          console.log(error);
+          setHasError(true);
+          // Send message to database
+          setErrorMessage("Server Error ⛔️");
+          // Empty the fields
+          setTimeout(() => {
+            setHasError(false);
+            setErrorMessage("");
+          }, 2000);
+        });
     }
   };
 
