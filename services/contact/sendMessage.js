@@ -1,6 +1,6 @@
 export default function sendContactMessage(data) {
   return fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}${process.env.NEXT_PUBLIC_API_VERSION}`,
+    `${process.env.NEXT_PUBLIC_API_URL}${process.env.NEXT_PUBLIC_API_VERSION}/contact`,
     {
       method: "POST",
       headers: {
