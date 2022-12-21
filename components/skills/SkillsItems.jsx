@@ -7,9 +7,10 @@ export default function SkillsItems() {
       title: "Front-end",
       technologies: [
         { id: 1, technology: "JavaScript" },
+        { id: 7, technology: "TypeScript" },
         { id: 2, technology: "Angular, NgRx" },
-        { id: 2, technology: "React Js, NextJs" },
-        { id: 5, technology: "Css 3, Sass" },
+        { id: 3, technology: "React Js, NextJs" },
+        { id: 4, technology: "Css 3, Sass" },
         { id: 5, technology: "Bootstrap, Tailwind css" },
         { id: 6, technology: "Html 5" },
       ],
