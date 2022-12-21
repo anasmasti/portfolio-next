@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import GLOBE from "vanta/dist/vanta.globe.min";
-import Menu from "./../Menu/Menu";
+import Menu from "./../menu/Menu";
 import LandingTitle from "./LandingTitle";
 
 export default function LandingSection() {

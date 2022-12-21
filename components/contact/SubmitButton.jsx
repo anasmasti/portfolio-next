@@ -13,6 +13,9 @@ export default function SubmitButton() {
   const [errorMessage, setErrorMessage] = useState("");
 
   let handleSubmit = () => {
+    // convert data to json for submit it
+    let dataToJson = JSON.stringify(formData);
+
     if (
       formData.first_name == "" ||
       formData.last_name == "" ||
@@ -27,7 +30,7 @@ export default function SubmitButton() {
         setErrorMessage("");
       }, 2000);
     } else {
-      sendMessage(formData)
+      sendMessage(dataToJson)
         .then(() => {
           setIsDone(true);
           fillFormGlobalData({
@@ -51,7 +54,7 @@ export default function SubmitButton() {
           console.log(error);
           setHasError(true);
           // Send message to database
-          setErrorMessage("Server Error ⛔️");
+          setErrorMessage(error + " ⛔️");
           // Empty the fields
           setTimeout(() => {
             setHasError(false);
