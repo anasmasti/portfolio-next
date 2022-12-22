@@ -6,23 +6,19 @@ export default function SkillsItems() {
       id: 1,
       title: "Front-end",
       technologies: [
-        { id: 1, technology: "JavaScript" },
-        { id: 7, technology: "TypeScript" },
-        { id: 2, technology: "Angular, NgRx" },
-        { id: 3, technology: "React Js, NextJs" },
-        { id: 4, technology: "Css 3, Sass" },
-        { id: 5, technology: "Bootstrap, Tailwind css" },
+        { id: 1, technology: "JavaScript, TypeScript" },
+        { id: 2, technology: "Angular (NgRx)" },
+        { id: 3, technology: "React Js (NextJs, Redux)" },
+        { id: 3, technology: "Vue Js 3 (NuxtJs, Vuex | Pinia)" },
+        { id: 4, technology: "Css 3 (Sass)" },
+        { id: 5, technology: "Tailwind css, Bootstrap" },
         { id: 6, technology: "Html 5" },
       ],
     },
     {
       id: 2,
       title: "Back-end",
-      technologies: [
-        { id: 1, technology: "Node JS, Express JS" },
-        { id: 3, technology: "Java, Spring Boot" },
-        { id: 2, technology: "Php, Laravel MVC" },
-      ],
+      technologies: [{ id: 1, technology: "Node JS (Express JS)" }],
     },
     {
       id: 3,
@@ -53,7 +49,7 @@ export default function SkillsItems() {
     {
       id: 7,
       title: "Version Management",
-      technologies: [{ id: 1, technology: "Git, GitHub" }],
+      technologies: [{ id: 1, technology: "Git (GitHub)" }],
     },
     {
       id: 8,
