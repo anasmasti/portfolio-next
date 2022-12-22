@@ -1,13 +1,5 @@
-export default function sendContactMessage(data) {
-  return fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}${process.env.NEXT_PUBLIC_API_VERSION}/contact`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Api-Key-Access": process.env.NEXT_PUBLIC_API_KEY,
-      },
-      body: data,
-    }
-  );
+import axios from "../../config/axios.config";
+
+export default async function sendContactMessage(data) {
+  return await axios.post("contact", data);
 }

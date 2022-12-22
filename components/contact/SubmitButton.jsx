@@ -13,9 +13,6 @@ export default function SubmitButton() {
   const [errorMessage, setErrorMessage] = useState("");
 
   let handleSubmit = () => {
-    // convert data to json for submit it
-    let dataToJson = JSON.stringify(formData);
-
     if (
       formData.first_name == "" ||
       formData.last_name == "" ||
@@ -30,7 +27,7 @@ export default function SubmitButton() {
         setErrorMessage("");
       }, 2000);
     } else {
-      sendMessage(dataToJson)
+      sendMessage(formData)
         .then(() => {
           setIsDone(true);
           fillFormGlobalData({
@@ -51,10 +48,9 @@ export default function SubmitButton() {
           }, 3000);
         })
         .catch((error) => {
-          console.log(error);
           setHasError(true);
           // Send message to database
-          setErrorMessage(error + " ⛔️");
+          setErrorMessage(error.response.data.message + " ⛔️");
           // Empty the fields
           setTimeout(() => {
             setHasError(false);
