@@ -11,7 +11,7 @@ export default function SocialMedia() {
     {
       id: 2,
       icon: <ImLinkedin2 />,
-      url: "https://www.linkedin.com/in/anas-masti-616040189",
+      url: "https://www.linkedin.com/in/anasmasti",
       label: "LinkedIn",
     },
     {
