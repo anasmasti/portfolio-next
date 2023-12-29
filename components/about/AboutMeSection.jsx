@@ -14,18 +14,22 @@ export default function AboutMeSection() {
   let paragraphs = [
     {
       id: 1,
-      body: "I'm a Full-Stack Web Developer based in Morocco, passionate about creating responsive websites with ergonomic qualities that can be adapted to any device.",
+      body: "Greetings from the coding cosmos! I'm Anas,  a JavaScript virtuoso based in the heart of Morocco. By day, I'm weaving magic into the digital fabric, conjuring interactive and responsive web experiences. JavaScript isn't just a language for me, it's the wand that brings pixels to life.",
     },
     {
       id: 2,
-      body: "I like to share my skills and knowledge with people who have the same passion.",
+      body: "Sharing my skills and knowledge is not just a pastime, it's a commitment to fostering a community of like-minded individuals who share the same fervor for web development.",
     },
     {
       id: 3,
-      body: "I'm so interested in the IT development sector, and very attracted to new technologies.",
+      body: "My enthusiasm for the IT development sector knows no bounds, and I am irresistibly drawn to the ever-evolving landscape of new technologies.",
+    },
+    {
+      id: 4,
+      body: "When the sun dips below the horizon, I morph into a nocturnal gamer. Armed with a keyboard and a passion for pixels, I venture into virtual realms, mastering challenges and embracing the adrenaline of the game. It's not just about pixels, it's about the pixelated adventures that unfold under the glow of my screens",
     },
   ];
-  let numberOfPages = 3;
+  let numberOfPages = 4;
   let progress = 0;
   let { current: containerElement } = refContainer;
 
