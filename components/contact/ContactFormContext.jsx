@@ -1,6 +1,6 @@
 import React from "react";
 
-let initFormData = {
+export const initialFormData = {
   first_name: "",
   last_name: "",
   phone: "",
@@ -8,9 +8,16 @@ let initFormData = {
   message: "",
 };
 
-let initFormGlobalData = {
+export const initialFormGlobalData = {
   sent: false,
 };
 
-export const contactFormContext = React.createContext(initFormData);
-export const contactFormGlobalContext = React.createContext(initFormGlobalData);
+export const contactFormContext = React.createContext({
+  formData: initialFormData,
+  fillFormData: () => {},
+});
+
+export const contactFormGlobalContext = React.createContext({
+  formGlobalData: initialFormGlobalData,
+  fillFormGlobalData: () => {},
+});

@@ -5,31 +5,32 @@ import AboutMeLinks from "./AboutMeLinks";
 import MainTitle from "../shared/MainTitle";
 import SocialMedia from "../shared/SocialMedia";
 
+const paragraphs = [
+  {
+    id: 1,
+    body: "Greetings from the coding cosmos! I'm Anas,  a JavaScript virtuoso based in the heart of Morocco. By day, I'm weaving magic into the digital fabric, conjuring interactive and responsive web experiences. JavaScript isn't just a language for me, it's the wand that brings pixels to life.",
+  },
+  {
+    id: 2,
+    body: "Sharing my skills and knowledge is not just a pastime, it's a commitment to fostering a community of like-minded individuals who share the same fervor for web development.",
+  },
+  {
+    id: 3,
+    body: "My enthusiasm for the IT development sector knows no bounds, and I am irresistibly drawn to the ever-evolving landscape of new technologies.",
+  },
+  {
+    id: 4,
+    body: "When the sun dips below the horizon, I morph into a nocturnal gamer. Armed with a keyboard and a passion for pixels, I venture into virtual realms, mastering challenges and embracing the adrenaline of the game. It's not just about pixels, it's about the pixelated adventures that unfold under the glow of my screens",
+  },
+];
+const numberOfPages = 4;
+
 export default function AboutMeSection() {
   const [scrollY, setScrollY] = useState(0);
   const handelScroll = useCallback(() => {
     setScrollY(window.scrollY);
   }, []);
   const refContainer = useRef();
-  let paragraphs = [
-    {
-      id: 1,
-      body: "Greetings from the coding cosmos! I'm Anas,  a JavaScript virtuoso based in the heart of Morocco. By day, I'm weaving magic into the digital fabric, conjuring interactive and responsive web experiences. JavaScript isn't just a language for me, it's the wand that brings pixels to life.",
-    },
-    {
-      id: 2,
-      body: "Sharing my skills and knowledge is not just a pastime, it's a commitment to fostering a community of like-minded individuals who share the same fervor for web development.",
-    },
-    {
-      id: 3,
-      body: "My enthusiasm for the IT development sector knows no bounds, and I am irresistibly drawn to the ever-evolving landscape of new technologies.",
-    },
-    {
-      id: 4,
-      body: "When the sun dips below the horizon, I morph into a nocturnal gamer. Armed with a keyboard and a passion for pixels, I venture into virtual realms, mastering challenges and embracing the adrenaline of the game. It's not just about pixels, it's about the pixelated adventures that unfold under the glow of my screens",
-    },
-  ];
-  let numberOfPages = 4;
   let progress = 0;
   let { current: containerElement } = refContainer;
 

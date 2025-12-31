@@ -2,16 +2,9 @@ import { useContext, useState } from "react";
 import {
   contactFormContext,
   contactFormGlobalContext,
+  initialFormData,
 } from "./ContactFormContext";
 import sendMessage from "../../services/contact/sendMessage";
-
-const emptyFormData = {
-  first_name: "",
-  last_name: "",
-  phone: "",
-  email: "",
-  message: "",
-};
 
 const isMissingRequiredField = (formData) =>
   Object.values(formData).some((value) => value === "");
@@ -38,7 +31,7 @@ export default function SubmitButton() {
           fillFormGlobalData({
             sent: true,
           });
-          fillFormData(emptyFormData);
+          fillFormData({ ...initialFormData });
           setTimeout(() => {
             setIsDone(false);
             fillFormGlobalData({

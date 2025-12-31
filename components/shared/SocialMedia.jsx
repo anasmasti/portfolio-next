@@ -1,33 +1,33 @@
 import { ImFacebook, ImTwitter, ImLinkedin2, ImGithub } from "react-icons/im";
 
-export default function SocialMedia() {
-  let socialMedia = [
-    {
-      id: 1,
-      icon: <ImGithub />,
-      url: "https://github.com/anasmasti",
-      label: "GitHub",
-    },
-    {
-      id: 2,
-      icon: <ImLinkedin2 />,
-      url: "https://www.linkedin.com/in/anasmasti",
-      label: "LinkedIn",
-    },
-    {
-      id: 3,
-      icon: <ImTwitter />,
-      url: "https://twitter.com/AnasMasti",
-      label: "Twitter",
-    },
-    {
-      id: 4,
-      icon: <ImFacebook />,
-      url: "https://www.facebook.com/anas.masti.96",
-      label: "Facebook",
-    },
-  ];
+const socialMedia = [
+  {
+    id: 1,
+    icon: <ImGithub />,
+    url: "https://github.com/anasmasti",
+    label: "GitHub",
+  },
+  {
+    id: 2,
+    icon: <ImLinkedin2 />,
+    url: "https://www.linkedin.com/in/anasmasti",
+    label: "LinkedIn",
+  },
+  {
+    id: 3,
+    icon: <ImTwitter />,
+    url: "https://twitter.com/AnasMasti",
+    label: "Twitter",
+  },
+  {
+    id: 4,
+    icon: <ImFacebook />,
+    url: "https://www.facebook.com/anas.masti.96",
+    label: "Facebook",
+  },
+];
 
+export default function SocialMedia() {
   return (
     <div className="flex gap-3 my-8 text-gray-300">
       {socialMedia.map((social) => (

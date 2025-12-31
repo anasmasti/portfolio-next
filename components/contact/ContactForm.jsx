@@ -2,21 +2,11 @@ import ContactFormInputsSection from "./ContactFormInputsSection";
 import {
   contactFormContext,
   contactFormGlobalContext,
+  initialFormData,
+  initialFormGlobalData,
 } from "./ContactFormContext";
 import SubmitButton from "./SubmitButton";
 import { useEffect, useRef, useState } from "react";
-
-const initialFormData = {
-  first_name: "",
-  last_name: "",
-  phone: "",
-  email: "",
-  message: "",
-};
-
-const initialFormGlobalData = {
-  sent: false,
-};
 
 export default function ContactForm() {
   const [formData, setFormData] = useState(initialFormData);
