@@ -4,23 +4,25 @@ import {
   contactFormGlobalContext,
 } from "./ContactFormContext";
 import SubmitButton from "./SubmitButton";
-import { useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const initialFormData = {
+  first_name: "",
+  last_name: "",
+  phone: "",
+  email: "",
+  message: "",
+};
+
+const initialFormGlobalData = {
+  sent: false,
+};
 
 export default function ContactForm() {
-  let initFormData = {
-    first_name: "",
-    last_name: "",
-    phone: "",
-    email: "",
-    message: "",
-  };
-
-  let initFormGlobalData = {
-    sent: false,
-  };
-
-  const [formData, setFormData] = useState(initFormData);
-  const [formGlobalData, setFormGlobalData] = useState(initFormGlobalData);
+  const [formData, setFormData] = useState(initialFormData);
+  const [formGlobalData, setFormGlobalData] = useState(
+    initialFormGlobalData
+  );
   const formRef = useRef();
 
   function fillFormData(data) {
@@ -31,9 +33,11 @@ export default function ContactForm() {
     setFormGlobalData(data);
   }
 
-  if (formGlobalData.sent) {
-    formRef.current.reset();
-  }
+  useEffect(() => {
+    if (formGlobalData.sent && formRef.current) {
+      formRef.current.reset();
+    }
+  }, [formGlobalData.sent]);
 
   return (
     <div className="p-10 bg-black z-10 relative rounded-2xl mt-10 flex">

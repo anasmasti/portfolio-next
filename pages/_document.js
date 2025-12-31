@@ -18,7 +18,7 @@ export default function MyDocument() {
           content="e7uObb_R2u4MF6JYc14AYBpZSN8ArazQ_YD0iNnm_UY"
         />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <script src="static/js/three.min.js" defer></script>
+        <script src="/static/js/three.min.js" defer></script>
       </Head>
       <body>
         <Main />

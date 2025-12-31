@@ -5,6 +5,17 @@ import {
 } from "./ContactFormContext";
 import sendMessage from "../../services/contact/sendMessage";
 
+const emptyFormData = {
+  first_name: "",
+  last_name: "",
+  phone: "",
+  email: "",
+  message: "",
+};
+
+const isMissingRequiredField = (formData) =>
+  Object.values(formData).some((value) => value === "");
+
 export default function SubmitButton() {
   const { formData, fillFormData } = useContext(contactFormContext);
   const { fillFormGlobalData } = useContext(contactFormGlobalContext);
@@ -13,15 +24,9 @@ export default function SubmitButton() {
   const [errorMessage, setErrorMessage] = useState("");
 
   let handleSubmit = () => {
-    if (
-      formData.first_name == "" ||
-      formData.last_name == "" ||
-      formData.phone == "" ||
-      formData.email == "" ||
-      formData.message == ""
-    ) {
+    if (isMissingRequiredField(formData)) {
       setHasError(true);
-      setErrorMessage("You Must Complete All Fields ⛔️");
+      setErrorMessage("You must complete all fields.");
       setTimeout(() => {
         setHasError(false);
         setErrorMessage("");
@@ -33,13 +38,7 @@ export default function SubmitButton() {
           fillFormGlobalData({
             sent: true,
           });
-          fillFormData({
-            first_name: "",
-            last_name: "",
-            phone: "",
-            email: "",
-            message: "",
-          });
+          fillFormData(emptyFormData);
           setTimeout(() => {
             setIsDone(false);
             fillFormGlobalData({
@@ -49,9 +48,8 @@ export default function SubmitButton() {
         })
         .catch((error) => {
           setHasError(true);
-          // Send message to database
-          setErrorMessage(error.response.data.message + " ⛔️");
-          // Empty the fields
+          const fallbackMessage = "Something went wrong. Please try again.";
+          setErrorMessage(error?.response?.data?.message || fallbackMessage);
           setTimeout(() => {
             setHasError(false);
             setErrorMessage("");
@@ -70,8 +68,8 @@ export default function SubmitButton() {
       disabled={isDone || hasError}
     >
       {!isDone && !hasError && "Send Message"}
-      {isDone && "Message Sent Successfully ✅"}
-      {hasError && (errorMessage ? errorMessage : "There's An Error 📛")}
+      {isDone && "Message sent successfully."}
+      {hasError && (errorMessage ? errorMessage : "There's an error.")}
     </button>
   );
 }

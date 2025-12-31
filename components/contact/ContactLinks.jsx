@@ -5,14 +5,17 @@ import {
   RiMailSendLine,
 } from "react-icons/ri";
 
-export default function ContactLinks() {
-  let message = "Hi Anas I saw your portfolio, I want to tell you that ";
+const message = "Hi Anas, I saw your portfolio, I want to tell you that ";
+const subject = "Anas Masti Portfolio Contact";
+const encodedMessage = encodeURIComponent(message);
+const encodedSubject = encodeURIComponent(subject);
 
+export default function ContactLinks() {
   let links = [
     {
       id: 1,
       title: "WhatsApp",
-      url: `https://wa.me/212660548100?text=${message}`,
+      url: `https://wa.me/212660548100?text=${encodedMessage}`,
       bg_img: "bg-whatsapp",
       icon: <RiWhatsappLine />,
     },
@@ -33,7 +36,7 @@ export default function ContactLinks() {
     {
       id: 4,
       title: "E-mail",
-      url: `mailto:anasmasti@hotmail.com?subject='Anas Masti Portfolio' Contact&body=${message}`,
+      url: `mailto:anasmasti@hotmail.com?subject=${encodedSubject}&body=${encodedMessage}`,
       bg_img: "bg-mail",
       icon: <RiMailSendLine />,
     },
