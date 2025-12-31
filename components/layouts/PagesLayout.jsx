@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import GoHomeButton from "../shared/GoHomeButton";
 
 export default function PagesLayout({ children }) {
@@ -11,3 +12,7 @@ export default function PagesLayout({ children }) {
     </>
   );
 }
+
+PagesLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};

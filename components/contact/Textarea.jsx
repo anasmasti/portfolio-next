@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Textarea({ name, placeholder, handleInputChange }) {
   return (
     <textarea
@@ -10,3 +12,9 @@ export default function Textarea({ name, placeholder, handleInputChange }) {
     ></textarea>
   );
 }
+
+Textarea.propTypes = {
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  handleInputChange: PropTypes.func.isRequired,
+};

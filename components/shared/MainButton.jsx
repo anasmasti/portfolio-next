@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PropTypes from "prop-types";
 export default function MainButton({ title, icon, goTo }) {
   return (
     <Link
@@ -10,3 +11,9 @@ export default function MainButton({ title, icon, goTo }) {
     </Link>
   );
 }
+
+MainButton.propTypes = {
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.node,
+  goTo: PropTypes.string.isRequired,
+};

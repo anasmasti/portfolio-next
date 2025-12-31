@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function SkillsItem({ skill }) {
   return (
     <div className="mt-3">
@@ -10,3 +12,15 @@ export default function SkillsItem({ skill }) {
     </div>
   );
 }
+
+SkillsItem.propTypes = {
+  skill: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    technologies: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        technology: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+  }).isRequired,
+};

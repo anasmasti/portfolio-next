@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PropTypes from "prop-types";
 
 export default function NavItem({ title, icon, goTo }) {
   return (
@@ -11,3 +12,9 @@ export default function NavItem({ title, icon, goTo }) {
     </li>
   );
 }
+
+NavItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.node,
+  goTo: PropTypes.string.isRequired,
+};

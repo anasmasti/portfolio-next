@@ -6,7 +6,7 @@ import {
   initialFormGlobalData,
 } from "./ContactFormContext";
 import SubmitButton from "./SubmitButton";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState(initialFormData);
@@ -23,6 +23,15 @@ export default function ContactForm() {
     setFormGlobalData(data);
   }
 
+  const formContextValue = useMemo(
+    () => ({ formData, fillFormData }),
+    [formData]
+  );
+  const formGlobalContextValue = useMemo(
+    () => ({ formGlobalData, fillFormGlobalData }),
+    [formGlobalData]
+  );
+
   useEffect(() => {
     if (formGlobalData.sent && formRef.current) {
       formRef.current.reset();
@@ -33,9 +42,9 @@ export default function ContactForm() {
     <div className="p-10 bg-black z-10 relative rounded-2xl mt-10 flex">
       <form className="flex flex-col gap-4 w-full" ref={formRef}>
         <contactFormGlobalContext.Provider
-          value={{ formGlobalData, fillFormGlobalData }}
+          value={formGlobalContextValue}
         >
-          <contactFormContext.Provider value={{ formData, fillFormData }}>
+          <contactFormContext.Provider value={formContextValue}>
             <ContactFormInputsSection />
             <SubmitButton />
           </contactFormContext.Provider>

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function ProjectItem({ title, link, tech, bg }) {
   return (
     <div
@@ -8,3 +10,10 @@ export default function ProjectItem({ title, link, tech, bg }) {
     </div>
   );
 }
+
+ProjectItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  tech: PropTypes.string.isRequired,
+  bg: PropTypes.string.isRequired,
+};

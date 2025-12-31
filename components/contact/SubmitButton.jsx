@@ -7,7 +7,7 @@ import {
 import sendMessage from "../../services/contact/sendMessage";
 
 const isMissingRequiredField = (formData) =>
-  Object.values(formData).some((value) => value === "");
+  Object.values(formData).includes("");
 
 export default function SubmitButton() {
   const { formData, fillFormData } = useContext(contactFormContext);
@@ -63,7 +63,7 @@ export default function SubmitButton() {
     >
       {!isDone && !hasError && "Send Message"}
       {isDone && "Message sent. You rock."}
-      {hasError && (errorMessage ? errorMessage : "Hmm. That didn't work.")}
+      {hasError && (errorMessage || "Hmm. That didn't work.")}
     </button>
   );
 }

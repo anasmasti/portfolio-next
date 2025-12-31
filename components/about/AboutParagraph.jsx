@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import aboutStyle from "../../styles/About.module.scss";
 
 const blockOpacity = (sectionProgress, blockNo) => {
@@ -22,3 +23,13 @@ export default function AboutParagraph({ content, progress }) {
     </>
   );
 }
+
+AboutParagraph.propTypes = {
+  content: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      body: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  progress: PropTypes.number.isRequired,
+};

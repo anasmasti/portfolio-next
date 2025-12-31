@@ -10,15 +10,15 @@ const vantaOptions = {
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
-  minHeight: 200.0,
-  minWidth: 200.0,
-  scale: 1.0,
-  scaleMobile: 1.0,
+  minHeight: 200,
+  minWidth: 200,
+  scale: 1,
+  scaleMobile: 1,
   color: 0x603cfd,
   color2: 0x603cfd,
   backgroundColor: 0x0,
   size: 3.4,
-  spacing: 20.0,
+  spacing: 20,
 };
 
 export default function ContactSection() {
