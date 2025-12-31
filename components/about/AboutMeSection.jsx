@@ -8,19 +8,19 @@ import SocialMedia from "../shared/SocialMedia";
 const paragraphs = [
   {
     id: 1,
-    body: "Greetings from the coding cosmos! I'm Anas,  a JavaScript virtuoso based in the heart of Morocco. By day, I'm weaving magic into the digital fabric, conjuring interactive and responsive web experiences. JavaScript isn't just a language for me, it's the wand that brings pixels to life.",
+    body: "Hi, I'm Anas, a JavaScript expert from Morocco. I build fast, clean, and responsive web experiences (and yes, I test on my phone too).",
   },
   {
     id: 2,
-    body: "Sharing my skills and knowledge is not just a pastime, it's a commitment to fostering a community of like-minded individuals who share the same fervor for web development.",
+    body: "I enjoy sharing what I learn and helping others grow in web development. Knowledge hoarding is bad for karma.",
   },
   {
     id: 3,
-    body: "My enthusiasm for the IT development sector knows no bounds, and I am irresistibly drawn to the ever-evolving landscape of new technologies.",
+    body: "I stay sharp with modern web tech and love learning new tools without breaking production. Mostly.",
   },
   {
     id: 4,
-    body: "When the sun dips below the horizon, I morph into a nocturnal gamer. Armed with a keyboard and a passion for pixels, I venture into virtual realms, mastering challenges and embracing the adrenaline of the game. It's not just about pixels, it's about the pixelated adventures that unfold under the glow of my screens",
+    body: "When I'm not coding, I relax by playing games and pretending it's for UX research.",
   },
 ];
 const numberOfPages = 4;

@@ -19,7 +19,7 @@ export default function SubmitButton() {
   let handleSubmit = () => {
     if (isMissingRequiredField(formData)) {
       setHasError(true);
-      setErrorMessage("You must complete all fields.");
+      setErrorMessage("All fields, please. I can't read minds (yet).");
       setTimeout(() => {
         setHasError(false);
         setErrorMessage("");
@@ -41,7 +41,8 @@ export default function SubmitButton() {
         })
         .catch((error) => {
           setHasError(true);
-          const fallbackMessage = "Something went wrong. Please try again.";
+          const fallbackMessage =
+            "Oops. The internet tripped. Please try again.";
           setErrorMessage(error?.response?.data?.message || fallbackMessage);
           setTimeout(() => {
             setHasError(false);
@@ -61,8 +62,8 @@ export default function SubmitButton() {
       disabled={isDone || hasError}
     >
       {!isDone && !hasError && "Send Message"}
-      {isDone && "Message sent successfully."}
-      {hasError && (errorMessage ? errorMessage : "There's an error.")}
+      {isDone && "Message sent. You rock."}
+      {hasError && (errorMessage ? errorMessage : "Hmm. That didn't work.")}
     </button>
   );
 }
