@@ -1,13 +1,13 @@
-import Head from "next/head";
 import AboutMeSection from "../components/about/AboutMeSection";
 import LandingSection from "../components/landing/LandingSection";
 
-export default function Home() {
+export const metadata = {
+  title: "Anas Masti",
+};
+
+export default function HomePage() {
   return (
     <main>
-      <Head>
-        <title>Anas Masti</title>
-      </Head>
       <LandingSection />
       <AboutMeSection />
     </main>

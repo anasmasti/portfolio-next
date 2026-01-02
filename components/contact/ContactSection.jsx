@@ -1,29 +1,18 @@
+"use client";
+
 import React, { useRef } from "react";
-import DOTS from "vanta/dist/vanta.dots.min";
 import PagesLayout from "../layouts/PagesLayout";
 import MainTitle from "../shared/MainTitle";
 import ContactForm from "./ContactForm";
 import ContactLinks from "./ContactLinks";
 import useVantaEffect from "../../hooks/useVantaEffect";
+import { dotsVantaOptions } from "../../config/vanta.config";
 
-const vantaOptions = {
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200,
-  minWidth: 200,
-  scale: 1,
-  scaleMobile: 1,
-  color: 0x603cfd,
-  color2: 0x603cfd,
-  backgroundColor: 0x0,
-  size: 3.4,
-  spacing: 20,
-};
+const loadDotsEffect = () => import("vanta/dist/vanta.dots.min");
 
 export default function ContactSection() {
   const contactRef = useRef(null);
-  useVantaEffect(DOTS, contactRef, vantaOptions);
+  useVantaEffect(loadDotsEffect, contactRef, dotsVantaOptions);
 
   return (
     <PagesLayout>

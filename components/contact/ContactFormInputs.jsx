@@ -1,27 +1,15 @@
-import { useContext } from "react";
 import PropTypes from "prop-types";
-import { contactFormContext } from "./ContactFormContext";
 import ContactFormInput from "./ContactFormInput";
 
-export default function ContactFormInputs({ inputs }) {
-  const { formData, fillFormData } = useContext(contactFormContext);
-
-  const handleInputChange = (event) => {
-    const { name, value } = event;
-
-    fillFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
+export default function ContactFormInputs({ inputs, values, onFieldChange }) {
   return (
     <>
       {inputs.map((input) => (
         <ContactFormInput
           key={input.id}
           {...input}
-          handleInputChange={handleInputChange}
+          value={values[input.name] || ""}
+          onFieldChange={onFieldChange}
         />
       ))}
     </>
@@ -37,4 +25,6 @@ ContactFormInputs.propTypes = {
       placeholder: PropTypes.string.isRequired,
     })
   ).isRequired,
+  values: PropTypes.object.isRequired,
+  onFieldChange: PropTypes.func.isRequired,
 };

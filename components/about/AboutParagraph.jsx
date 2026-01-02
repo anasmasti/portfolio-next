@@ -1,3 +1,5 @@
+"use client";
+
 import PropTypes from "prop-types";
 import aboutStyle from "../../styles/About.module.scss";
 

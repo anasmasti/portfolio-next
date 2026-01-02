@@ -1,3 +1,5 @@
+"use client";
+
 import {
   RiMessengerLine,
   RiTelegramLine,
@@ -43,7 +45,7 @@ export default function ContactLinks() {
   ];
 
   return (
-    <div className="w-full lg:w-1/2 md:w-full flex flex-col lg:flex-row md:flex-row justify-between gap-3 mt-10 break-words">
+    <div className="w-full lg:w-1/2 md:w-full flex flex-col lg:flex-row md:flex-row justify-between gap-3 mt-10 wrap-break-word">
       {links.map((link) => (
         <a
           key={link.id}

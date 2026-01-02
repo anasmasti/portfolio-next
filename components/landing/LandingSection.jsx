@@ -1,25 +1,16 @@
-import React, { useRef } from "react";
-import GLOBE from "vanta/dist/vanta.globe.min";
+"use client";
+
+import { useRef } from "react";
 import Menu from "../Menu/Menu";
 import LandingTitle from "./LandingTitle";
 import useVantaEffect from "../../hooks/useVantaEffect";
+import { globeVantaOptions } from "../../config/vanta.config";
 
-const vantaOptions = {
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200,
-  minWidth: 200,
-  scale: 1,
-  scaleMobile: 1,
-  size: 1.4,
-  color: 0x603cfd,
-  backgroundColor: 0x0,
-};
+const loadGlobeEffect = () => import("vanta/dist/vanta.globe.min");
 
 export default function LandingSection() {
   const landingRef = useRef(null);
-  useVantaEffect(GLOBE, landingRef, vantaOptions);
+  useVantaEffect(loadGlobeEffect, landingRef, globeVantaOptions);
 
   return (
     <>

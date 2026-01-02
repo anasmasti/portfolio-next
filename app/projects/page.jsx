@@ -1,12 +1,12 @@
 import ProjectsSection from "../../components/projects/ProjectsSection";
-import Head from "next/head";
 
-export default function Projects() {
+export const metadata = {
+  title: "Some Projects",
+};
+
+export default function ProjectsPage() {
   return (
     <section>
-      <Head>
-        <title>Some Projects</title>
-      </Head>
       <ProjectsSection />
     </section>
   );

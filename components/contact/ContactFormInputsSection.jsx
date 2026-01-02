@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import PropTypes from "prop-types";
 import ContactFormInputs from "./ContactFormInputs";
 
 const inputs = [
@@ -46,8 +48,7 @@ const inputs = [
   },
 ];
 
-export default function ContactFormInputsSection() {
-
+export default function ContactFormInputsSection({ values, onFieldChange }) {
   const checkClassName = (isGrouped) => {
     if (isGrouped) return "flex gap-2";
     else return "flex gap-4 flex-col";
@@ -57,9 +58,24 @@ export default function ContactFormInputsSection() {
     <>
       {inputs.map((input) => (
         <div key={input.id} className={checkClassName(input.isGrouped)}>
-          <ContactFormInputs inputs={input.inputs} />
+          <ContactFormInputs
+            inputs={input.inputs}
+            values={values}
+            onFieldChange={onFieldChange}
+          />
         </div>
       ))}
     </>
   );
 }
+
+ContactFormInputsSection.propTypes = {
+  values: PropTypes.shape({
+    first_name: PropTypes.string,
+    last_name: PropTypes.string,
+    phone: PropTypes.string,
+    email: PropTypes.string,
+    message: PropTypes.string,
+  }).isRequired,
+  onFieldChange: PropTypes.func.isRequired,
+};

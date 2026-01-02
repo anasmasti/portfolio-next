@@ -1,3 +1,5 @@
+"use client";
+
 import { useCallback, useEffect, useRef, useState } from "react";
 import AboutParagraph from "./AboutParagraph";
 import aboutStyle from "../../styles/About.module.scss";

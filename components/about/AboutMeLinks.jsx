@@ -1,3 +1,5 @@
+"use client";
+
 import { AiOutlineSolution, AiOutlineMessage } from "react-icons/ai";
 import MainButton from "../shared/MainButton";
 

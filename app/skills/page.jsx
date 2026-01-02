@@ -1,12 +1,12 @@
 import SkillsSection from "../../components/skills/SkillsSection";
-import Head from "next/head";
 
-export default function Skills() {
+export const metadata = {
+  title: "My Skills",
+};
+
+export default function SkillsPage() {
   return (
     <section>
-      <Head>
-        <title>My Skills</title>
-      </Head>
       <SkillsSection />
     </section>
   );

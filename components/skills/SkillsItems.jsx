@@ -30,6 +30,7 @@ const skills = [
     technologies: [
       { id: 1, technology: "MongoDB" },
       { id: 2, technology: "MySQL" },
+      { id: 3, technology: "PostgreSQL" },
     ],
   },
   {
@@ -89,7 +90,6 @@ const skills = [
 ];
 
 export default function SkillsItems() {
-
   return (
     <div className="mt-12 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:w-1/2">
       {skills.map((skill) => (

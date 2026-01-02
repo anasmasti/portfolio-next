@@ -1,3 +1,5 @@
+"use client";
+
 import {
   AiOutlineUser,
   AiOutlineMessage,
@@ -37,10 +39,7 @@ export default function NavItems() {
   return (
     <ul className="text-gray-300 flex flex-row gap-7 font-semibold">
       {navItems.map((navItem) => (
-        <NavItem
-          key={navItem.id}
-          {...navItem}
-        />
+        <NavItem key={navItem.id} {...navItem} />
       ))}
     </ul>
   );

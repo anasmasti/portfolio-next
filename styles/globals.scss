@@ -1,5 +1,3 @@
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 @config "../tailwind.config.js";
 @import "tailwindcss";
@@ -29,8 +27,22 @@
 }
 
 ::selection {
-  background-color: #603cfe85;
+  background-color: rgba(var(--color-primary), 0.52);
   color: #f5f5f5;
+}
+
+:root {
+  --color-primary: 96 60 254;
+  --color-primary-muted: 96 60 254;
+  --color-bg: #000000;
+  --color-surface: #1e1e1e90;
+  --color-text: #ffffff;
+  --color-text-muted: #f5f5f5;
+  --color-text-dim: #363636;
+  --color-accent-dark: #331b9ecb;
+  --color-accent-dark-hover: #341e9585;
+  --color-green: #22c55e;
+  --color-red: #ef4444;
 }
 
 ::-webkit-scrollbar {
@@ -79,7 +91,7 @@ h2::before {
   margin-top: 45px;
   margin-left: -10px;
   z-index: -1 !important;
-  background-color: #603cfe !important;
+  background-color: rgb(var(--color-primary)) !important;
 
   @media screen and (max-width: 480px) and (min-width: 320px) {
     & {
@@ -96,8 +108,7 @@ h2::before {
   margin-top: 16px;
   margin-left: -1px;
   z-index: -5 !important;
-
-  background-color: #603cfe !important;
+  background-color: rgb(var(--color-primary)) !important;
 }
 
 textarea {

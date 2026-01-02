@@ -1,3 +1,5 @@
+"use client";
+
 import { ImFacebook, ImTwitter, ImLinkedin2, ImGithub } from "react-icons/im";
 
 const socialMedia = [
@@ -16,14 +18,8 @@ const socialMedia = [
   {
     id: 3,
     icon: <ImTwitter />,
-    url: "https://twitter.com/AnasMasti",
+    url: "https://twitter.com/2xxmuzan",
     label: "Twitter",
-  },
-  {
-    id: 4,
-    icon: <ImFacebook />,
-    url: "https://www.facebook.com/anas.masti.96",
-    label: "Facebook",
   },
 ];
 
