@@ -1,6 +1,6 @@
 "use client";
 
-import { ImFacebook, ImTwitter, ImLinkedin2, ImGithub } from "react-icons/im";
+import { ImTwitter, ImLinkedin2, ImGithub } from "react-icons/im";
 
 const socialMedia = [
   {

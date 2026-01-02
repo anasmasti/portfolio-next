@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useEffect, useState } from "react";
+import { useActionState, useEffect, useRef, useState } from "react";
 import ContactFormInputsSection from "./ContactFormInputsSection";
 import SubmitButton from "./SubmitButton";
 import { submitContact } from "../../app/actions/contact";
@@ -18,6 +18,7 @@ export default function ContactForm() {
   const [state, formAction] = useActionState(submitContact, initialState);
   const [displayStatus, setDisplayStatus] = useState(initialState);
   const [formValues, setFormValues] = useState(initialFormValues);
+  const clearTimerRef = useRef(null);
 
   useEffect(() => {
     if (!state?.message) {
@@ -28,11 +29,16 @@ export default function ContactForm() {
     if (state.ok) {
       setFormValues(initialFormValues);
     }
-    const timer = setTimeout(() => {
+    clearTimerRef.current = setTimeout(() => {
       setDisplayStatus(initialState);
     }, 4000);
 
-    return () => clearTimeout(timer);
+    return () => {
+      if (clearTimerRef.current) {
+        clearTimeout(clearTimerRef.current);
+        clearTimerRef.current = null;
+      }
+    };
   }, [state]);
 
   const handleFieldChange = (name, value) => {
