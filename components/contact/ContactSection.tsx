@@ -18,8 +18,7 @@ export default function ContactSection() {
     <PagesLayout topBarMode="absolute">
       <div ref={contactRef} className="absolute z-0 w-full h-full"></div>
       <div
-        className="h-screen p-10 lg:p-10 text-white 
-        
+        className="h-screen p-15 lg:p-10 md:p-20 text-white
       flex justify-center items-center flex-col 
       md:flex md:justify-center md:items-center md:flex-col 
       lg:flex lg:justify-center lg:items-center lg:flex-col "
