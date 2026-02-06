@@ -1,6 +1,7 @@
 "use client";
 
 import { useFormStatus } from "react-dom";
+import PrimaryButton from "../shared/PrimaryButton";
 
 type SubmitStatus = {
   ok?: boolean;
@@ -15,18 +16,16 @@ export default function SubmitButton({ status }: SubmitButtonProps) {
   const { pending } = useFormStatus();
   const isSuccess = Boolean(status?.ok && status?.message);
   const isError = Boolean(!status?.ok && status?.message);
-  let buttonColorClass = "bg-primary";
+  let buttonColorClass = "border-primary/40 bg-primary/10 hover:border-primary/70 hover:bg-primary/20";
   if (isSuccess) {
-    buttonColorClass = "bg-green-500";
+    buttonColorClass = "border-green-400/60 bg-green-500/20 hover:border-green-300/80 hover:bg-green-500/30";
   } else if (isError) {
-    buttonColorClass = "bg-red-500";
+    buttonColorClass = "border-red-400/60 bg-red-500/20 hover:border-red-300/80 hover:bg-red-500/30";
   }
 
-  const buttonClassName = `p-3 rounded-xl text-white font-bold flex justify-center gap-1 transition-all duration-300 delay-75 hover:bg-black ${buttonColorClass}`;
-
   return (
-    <button type="submit" className={buttonClassName} disabled={pending}>
+    <PrimaryButton type="submit" disabled={pending} className={buttonColorClass}>
       {pending ? "Sending..." : status.message || "Send Message"}
-    </button>
+    </PrimaryButton>
   );
 }

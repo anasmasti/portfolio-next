@@ -12,7 +12,7 @@ type SkillsItemProps = {
   skill: Skill;
 };
 
-export default function SkillsItem({ skill }: SkillsItemProps) {
+export default function SkillsItem({ skill }: Readonly<SkillsItemProps>) {
   return (
     <div className="mt-3">
       <h5 className="text-lg font-bold text-white">{skill.title}</h5>

@@ -6,6 +6,7 @@ type Project = {
   link: string;
   tech: string;
   bg: string;
+  showLink?: boolean;
 };
 
 const projects: Project[] = [
@@ -15,62 +16,29 @@ const projects: Project[] = [
     link: "https://my-old-portfolio-website.netlify.app/",
     tech: "Angular 11, Node.js, Express.js.",
     bg: "bg-old",
-  },
-  {
-    id: 11,
-    title: "M&C coton",
-    link: "/",
-    tech: "Php, PrestaShop, Photoshop.",
-    bg: "bg-mc",
+    showLink: true,
   },
   {
     id: 2,
-    title: "MySYS",
-    link: "/",
-    tech: "ReactJs 16.10, Tailwind CSS.",
-    bg: "bg-mysys",
-  },
-  {
-    id: 3,
-    title: "Rosacolor",
-    link: "/",
-    tech: "JavaScript, Next.js, Php, Laravel MVC, Tailwind CSS.",
-    bg: "bg-m-global",
-  },
-  {
-    id: 4,
-    title: "Coastal West Limousines",
-    link: "/",
-    tech: "Php, WordPress, Bootstrap..",
-    bg: "bg-coastalwest-limousines",
-  },
-  {
-    id: 5,
-    title: "Matiplas",
-    link: "http://matiplas.ma/",
-    tech: "Wordpress.",
-    bg: "bg-matiplas",
+    title: "Trescal",
+    link: "https://www.trescal.com/",
+    tech: "JavaScript, TypeScript, Angular 17, Ngxs, Storybook, Tailwind CSS, SCSS, Material Design, Jira, Azu evOps, Git, GitFlow, Tests Unitaires (Jasmine), Tests E2E (Cypress), Figma",
+    bg: "bg-trescal",
+    showLink: true,
   },
   {
     id: 6,
-    title: "Mediexperts",
+    title: "Banque Populaire",
     link: "/",
-    tech: "JavaScript, Java, Spring Boot, MySQL, Angular 10, NgRx, Bootstrap.",
-    bg: "bg-mediexperts",
+    tech: "JavaScript, TypeScript, Angular 12, NgRx, PrimeNG, Node.js, Express.js, MongoDB, Git, GitFlow, Github, Tailwind CSS, SCSS, Docker, Tests Unitaires (Jasmine), Tests E2E (Cypress), Figma. Material Design, Jira, Azure DevOps, Git, GitFlow, Tests Unitaires (Jasmine), Tests E2E (Cypress), Adobe Xd.",
+    bg: "bg-bp",
   },
   {
     id: 7,
     title: "Mediexperts Academy",
     link: "https://mediexperts-academy.netlify.app/",
-    tech: "JavaScript, Angular 12, NgRx, Bootstrap., Tests E2E (Cypress), Figma.",
-    bg: "bg-mediexperts-academy",
-  },
-  {
-    id: 8,
-    title: "Copra Shop",
-    link: "https://copra.netlify.app/",
-    tech: "Angular 8, Node.js, Express.js.",
-    bg: "bg-copra",
+    tech: "JavaScript, Angular 12, NgRx, Bootstrap, Tests E2E (Cypress), Figma.",
+    bg: "bg-mediexperts",
   },
   {
     id: 9,
@@ -78,6 +46,7 @@ const projects: Project[] = [
     link: "https://play.google.com/store/apps/details?id=com.masti.hijaby&hl=fr&gl=US",
     tech: "React Native, Node.js, Express.js, Figma.",
     bg: "bg-hijaby",
+    showLink: true,
   },
 ];
 
