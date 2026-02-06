@@ -3,7 +3,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import AboutParagraph from "./AboutParagraph";
 import aboutStyle from "../../styles/About.module.scss";
-import AboutMeLinks from "./AboutMeLinks";
 import MainTitle from "../shared/MainTitle";
 import SocialMedia from "../shared/SocialMedia";
 
@@ -75,7 +74,6 @@ export default function AboutMeSection() {
           <AboutParagraph content={paragraphs} progress={progress} />
         </div>
       </div>
-      <AboutMeLinks />
     </section>
   );
 }
