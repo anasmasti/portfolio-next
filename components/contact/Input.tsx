@@ -12,7 +12,7 @@ export default function Input({
   placeholder,
   value,
   onFieldChange,
-}: InputProps) {
+}: Readonly<InputProps>) {
   return (
     <input
       type={type}

@@ -10,7 +10,7 @@ export default function Textarea({
   placeholder,
   value,
   onFieldChange,
-}: TextareaProps) {
+}: Readonly<TextareaProps>) {
   return (
     <textarea
       placeholder={placeholder}

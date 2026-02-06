@@ -75,7 +75,7 @@ const inputs: ContactFormInputGroup[] = [
 export default function ContactFormInputsSection({
   values,
   onFieldChange,
-}: ContactFormInputsSectionProps) {
+}: Readonly<ContactFormInputsSectionProps>) {
   const checkClassName = (isGrouped: boolean) =>
     isGrouped ? "flex gap-2" : "flex gap-4 flex-col";
 
