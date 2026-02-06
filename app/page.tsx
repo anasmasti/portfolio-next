@@ -1,7 +1,7 @@
 import AboutMeSection from "../components/about/AboutMeSection";
 import type { Metadata } from "next";
 import LandingSection from "../components/landing/LandingSection";
-import MediumSection from "../components/medium/MediumSection";
+import MediumSectionClient from "../components/medium/MediumSectionClient";
 import AboutMeLinks from "../components/about/AboutMeLinks";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default function HomePage() {
     <main>
       <LandingSection />
       <AboutMeSection />
-      <MediumSection />
+      <MediumSectionClient />
       <AboutMeLinks />
     </main>
   );
