@@ -3,10 +3,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 
-const MediumSection = dynamic(
-  () => import("./MediumSection"),
-  { ssr: false }
-);
+const MediumSection = dynamic(() => import("./MediumSection"), { ssr: false });
 
 export default function MediumSectionClient() {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,9 +27,5 @@ export default function MediumSectionClient() {
     return () => observer.disconnect();
   }, [isVisible]);
 
-  return (
-    <div ref={triggerRef}>
-      {isVisible ? <MediumSection /> : null}
-    </div>
-  );
+  return <div ref={triggerRef}>{isVisible ? <MediumSection /> : null}</div>;
 }

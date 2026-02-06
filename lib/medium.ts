@@ -12,9 +12,7 @@ function stripCdata(value: string) {
 }
 
 function getTag(item: string, tag: string) {
-  const pattern = new RegExp(
-    String.raw`<${tag}[^>]*>([\s\S]*?)</${tag}>`
-  );
+  const pattern = new RegExp(String.raw`<${tag}[^>]*>([\s\S]*?)</${tag}>`);
   const match = pattern.exec(item);
   if (!match) return "";
   return stripCdata(match[1]);
@@ -37,21 +35,24 @@ function formatDate(value: string) {
 }
 
 function parseFeed(xml: string): MediumPost[] {
-  const items = xml.split("<item>").slice(1).map((chunk) => {
-    const item = chunk.split("</item>")[0];
-    const title = getTag(item, "title");
-    const link = getTag(item, "link").split("?")[0];
-    const pubDate = getTag(item, "pubDate");
-    const content = getTag(item, "content:encoded");
-    const image = extractImageFromContent(content);
+  const items = xml
+    .split("<item>")
+    .slice(1)
+    .map((chunk) => {
+      const item = chunk.split("</item>")[0];
+      const title = getTag(item, "title");
+      const link = getTag(item, "link").split("?")[0];
+      const pubDate = getTag(item, "pubDate");
+      const content = getTag(item, "content:encoded");
+      const image = extractImageFromContent(content);
 
-    return {
-      title,
-      link,
-      image,
-      date: formatDate(pubDate),
-    };
-  });
+      return {
+        title,
+        link,
+        image,
+        date: formatDate(pubDate),
+      };
+    });
 
   return items.filter((item) => item.title && item.link);
 }

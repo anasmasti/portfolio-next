@@ -15,9 +15,7 @@ export default function MediumItem({
   date,
 }: Readonly<MediumItemProps>) {
   return (
-    <div
-      className="group relative flex h-[320px] flex-col gap-3 overflow-hidden rounded-2xl border border-white/5 p-4 shadow-[0_24px_60px_rgba(0,0,0,0.55)]"
-    >
+    <div className="group relative flex h-[320px] flex-col gap-3 overflow-hidden rounded-2xl border border-white/5 p-4 shadow-[0_24px_60px_rgba(0,0,0,0.55)]">
       <Image
         src={image}
         alt=""
